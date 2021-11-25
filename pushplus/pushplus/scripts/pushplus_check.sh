@@ -285,9 +285,9 @@ if [[ "${pushplus_info_usb}" == "1" ]]; then
         usb1_available=$(df -h | grep "${usb1_fs_path}" | head -n1 | awk '{print $4}')
         usb1_use=$(df -h | grep "${usb1_fs_path}" | head -n1 | awk '{print $5}')
         [ "${usb1_removed}" == "1" ] && usb1_status="removed" || usb1_status="mounted"
-        [ -n "${usb1_total}"] && usb1_total || usb1_total=0
-        [ -n "${usb1_used}"] && usb1_used || usb1_used=0
-        [ -n "${usb1_available}"] && usb1_available || usb1_available=0
+        # [ -n "${usb1_total}"] && usb1_total || usb1_total=0
+        # [ -n "${usb1_used}"] && usb1_used || usb1_used=0
+        # [ -n "${usb1_available}"] && usb1_available || usb1_available=0
         echo '{' >>${pushplus_info_text}
         echo '"name":"'${usb1_product}'",' >>${pushplus_info_text}
         echo '"status":"'${usb1_status}'",' >>${pushplus_info_text}
@@ -309,9 +309,9 @@ if [[ "${pushplus_info_usb}" == "1" ]]; then
         usb2_available=$(df -h | grep "${usb2_fs_path}" | head -n1 | awk '{print $4}')
         usb2_use=$(df -h | grep "${usb2_fs_path}" | head -n1 | awk '{print $5}')
         [ "${usb2_removed}" == "1" ] && usb2_status="removed" || usb2_status="mounted"
-        [ -n "${usb2_total}"] && usb2_total || usb2_total=0
-        [ -n "${usb2_used}"] && usb2_used || usb2_used=0
-        [ -n "${usb2_available}"] && usb2_available || usb2_available=0
+        # [ -n "${usb2_total}"] && usb2_total || usb2_total=0
+        # [ -n "${usb2_used}"] && usb2_used || usb2_used=0
+        # [ -n "${usb2_available}"] && usb2_available || usb2_available=0
         echo ',{' >>${pushplus_info_text}
         echo '"name":"'${usb2_product}'",' >>${pushplus_info_text}
         echo '"status":"'${usb2_status}'",' >>${pushplus_info_text}
